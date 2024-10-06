@@ -126,6 +126,15 @@ li.action-item.icon.checked a.action-label.codicon {
 .part.sidebar .welcome-view-content:focus {
   outline-color: transparent !important;
 }
+/* styling active file selected */
+.monaco-list.list_id_2:focus .monaco-list-row.focused.selected {
+  outline: 1px solid var(--vscode-list-focusAndSelectionOutline, var(--vscode-contrastActiveBorder, var(--vscode-list-focusOutline)));
+  outline-offset: -1px;
+  font-size: large !important;
+  font-weight: bold !important;
+  transform: scale(1) translateX(-3px);
+  animation: .2s ease-out scaleSize;
+}
 
 /* ------------ Command Palette ------------ */
 .quick-input-titlebar {
@@ -308,4 +317,24 @@ li.action-item.icon.checked a.action-label.codicon {
   top: 0;
   bottom: 0;
   width: 0;
+}
+
+/* ------------ Scrollbar ------------ */
+/* scrollbar editor */
+.monaco-editor .vertical {
+  width: 8px !important;
+  border-radius: 8px;
+}
+.monaco-scrollable-element>.scrollbar>.slider {
+  border-radius: 8px;
+  width: 8px !important;
+  background: var(--vscode-activityBar-activeBorder) !important;
+}
+
+/* scrollbar file explorer */
+.monaco-list .monaco-scrollable-element>.scrollbar.vertical, .monaco-pane-view>.monaco-split-view2.vertical>.monaco-scrollable-element>.scrollbar.vertical {
+  width: 4px !important;
+}
+.monaco-list .monaco-scrollable-element>.scrollbar.vertical>.slider {
+  width: 4px !important;
 }
